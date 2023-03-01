@@ -1,0 +1,21 @@
+PROCEDURE procedure_name(table:array of integer[n]) 
+VAR    
+ i:integer:=0   
+ test:BOOLEAN:True 
+ x:integer:    
+ table: ARRAY_OF INTEGER[n] 
+BEGIN     
+  WHILE not (test==False) DO   
+    test=False     
+    FOR i FROM 1 TO n-1 STEP 1 DO     
+      IF table[i]<table[i-1] THEN 
+        X=table[i] 
+        table[i]=table[i-1] 
+        table[i-1]=X     
+        test=True             
+      END_IF      
+    END_FOR    
+  END_WHILE 
+  
+   write (table)
+END
